@@ -5,10 +5,6 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
-  const apiKey = "f8e6a9e3d6fde87cb38868da460b1371";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
-
   function handleResponse(response) {
     setWeatherData({
       temperature: Math.round(response.data.main.temp),
