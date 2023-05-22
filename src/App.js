@@ -7,7 +7,16 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Novi Sad" />
         <footer>
-          This project was coded by Andrea Jovicic and it is{" "}
+          This project was coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/andrea-jovicic-880b3b24a/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Andrea Jovicic
+          </a>{" "}
+          it is{" "}
           <a
             href="https://github.com/ajovicic019/react-weather-app"
             target="_blank"
@@ -16,6 +25,15 @@ export default function App() {
             {" "}
             open sourced
           </a>{" "}
+          and hosted on{" "}
+          <a
+            href="https://sage-taiyaki-eb3240.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Netlify
+          </a>
         </footer>
       </div>
     </div>
