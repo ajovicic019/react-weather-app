@@ -13,7 +13,19 @@ export default function WeatherDailyForecast(props) {
     setLoaded(true);
   }
   if (loaded) {
-    return <ForecastForDay data={forecast[0]} />;
+    return (
+      <div className="row">
+        {forecast.map(function (dailyForecast, index) {
+          if (index < 5) {
+            return (
+              <div className="col" key={index}>
+                <ForecastForDay data={dailyForecast} />
+              </div>
+            );
+          }
+        })}
+      </div>
+    );
   } else {
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
