@@ -1,0 +1,12 @@
+.WeatherDailyForecast {
+  text-align: center;
+}
+
+.WeatherDailyForecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+.Weather .WeatherDailyForecast canvas {
+  float: none;
+  margin: 10px auto;
+}
