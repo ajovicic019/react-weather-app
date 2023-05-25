@@ -18,6 +18,7 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
       ready: true,
+      coordinates: response.data.coord,
     });
   }
   function search() {
@@ -58,7 +59,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherDailyForecast />
+        <WeatherDailyForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
